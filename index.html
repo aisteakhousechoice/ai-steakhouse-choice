@@ -3,401 +3,253 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>AI Steakhouse Choice | Choose AI. Have It Your Way.</title>
-
-<meta name="description" content="AI Steakhouse Choice helps you discover, compare and choose the AI tools that fit your goals, budget and workflow.">
+<meta name="description" content="Discover, compare and choose AI tools for video, voice, writing, presentations and productivity. Find the tools that fit your goals.">
+<meta name="theme-color" content="#f7f2e8">
 
 <style>
 :root{
-  --ink:#171717;
-  --muted:#666;
-  --paper:#f7f2e8;
-  --card:#fffdf8;
-  --accent:#a54b2a;
-  --line:#ded5c7;
-  --dark:#211f1b;
-  --success:#315c3a;
+--ink:#171717;
+--muted:#666;
+--paper:#f7f2e8;
+--card:#fffdf8;
+--accent:#a54b2a;
+--line:#ded5c7;
+--dark:#211f1b;
+--green:#315c3a;
 }
-
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{
-  margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.5
+margin:0;
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+color:var(--ink);
+background:var(--paper);
+line-height:1.55;
 }
-
-a{
-  text-decoration:none;
-  color:inherit
-}
-
-.wrap{
-  max-width:1120px;
-  margin:auto;
-  padding:0 24px
-}
-
-/* HEADER */
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
 
 header{
-  padding:24px 0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid var(--line)
+padding:22px 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--line);
 }
-
-.logo{
-  font-weight:900;
-  letter-spacing:-.03em;
-  font-size:22px
-}
-
-.logo span{
-  color:var(--accent)
-}
-
-nav{
-  display:flex;
-  gap:22px;
-  font-size:14px;
-  color:#444
-}
-
-nav a:hover{
-  color:var(--accent)
-}
-
-/* HERO */
+.logo{font-weight:900;letter-spacing:-.03em;font-size:22px}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:22px;font-size:14px;color:#444}
+nav a:hover{color:var(--accent)}
 
 .hero{
-  padding:78px 0 64px;
-  text-align:center
+padding:76px 0 62px;
+text-align:center;
 }
-
 .eyebrow{
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:12px;
-  font-weight:800;
-  color:var(--accent)
+text-transform:uppercase;
+letter-spacing:.16em;
+font-size:12px;
+font-weight:800;
+color:var(--accent);
 }
-
 h1{
-  font-family:Georgia,serif;
-  font-size:clamp(48px,8vw,88px);
-  line-height:.95;
-  letter-spacing:-.055em;
-  margin:16px auto;
-  max-width:900px
+font-family:Georgia,serif;
+font-size:clamp(48px,8vw,84px);
+line-height:.98;
+letter-spacing:-.055em;
+margin:16px auto;
+max-width:900px;
 }
-
 .hero p{
-  font-size:20px;
-  color:var(--muted);
-  max-width:680px;
-  margin:22px auto 30px
+font-size:20px;
+color:var(--muted);
+max-width:700px;
+margin:22px auto 28px;
 }
-
 .buttons{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
 }
-
 .btn{
-  display:inline-block;
-  padding:14px 22px;
-  border-radius:999px;
-  font-weight:800;
-  border:1px solid var(--ink);
-  background:var(--ink);
-  color:white;
-  transition:.2s
+display:inline-block;
+padding:13px 20px;
+border-radius:999px;
+font-weight:800;
+border:1px solid var(--ink);
+background:var(--ink);
+color:white;
+transition:.2s;
+text-align:center;
 }
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.btn.alt{background:transparent;color:var(--ink)}
 
-.btn:hover{
-  transform:translateY(-2px);
-  opacity:.9
+.section{padding:52px 0}
+.section h2,.order h2{
+font-family:Georgia,serif;
+font-size:clamp(32px,5vw,42px);
+margin:0 0 10px;
+letter-spacing:-.03em;
 }
+.lead{color:var(--muted);max-width:720px}
 
-.btn.alt{
-  background:transparent;
-  color:var(--ink)
+.menu,.picks,.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:26px;
 }
-
-/* SECTIONS */
-
-.section{
-  padding:58px 0
+.item,.tool{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:18px;
+padding:22px;
 }
-
-.section h2{
-  font-family:Georgia,serif;
-  font-size:40px;
-  margin:0 0 10px;
-  letter-spacing:-.03em
-}
-
-.lead{
-  color:var(--muted);
-  max-width:680px
-}
-
-/* MENU */
-
-.menu{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:28px
-}
-
-.item{
-  background:var(--card);
-  border:1px solid var(--line);
-  padding:24px;
-  border-radius:18px;
-  transition:.2s
-}
-
-.item:hover{
-  transform:translateY(-3px);
-  border-color:var(--accent)
-}
-
-.item b{
-  font-size:18px
-}
-
-.item p{
-  color:var(--muted);
-  margin-bottom:0
-}
-
-/* FEATURED PICKS */
-
-.picks{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:30px
+.item{transition:.2s}
+.item:hover{transform:translateY(-3px);border-color:var(--accent)}
+.item b{font-size:18px}
+.item p,.tool p,.step p{
+color:var(--muted);
+margin-bottom:0;
 }
 
 .tool{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:25px;
-  display:flex;
-  flex-direction:column
+display:flex;
+flex-direction:column;
 }
-
 .tool-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
 }
-
-.tool-icon{
-  font-size:30px
-}
-
+.tool-icon{font-size:28px}
 .badge{
-  font-size:11px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--success)
+font-size:11px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.07em;
+color:var(--green);
 }
-
+.badge.pending{color:#777}
 .tool h3{
-  font-family:Georgia,serif;
-  font-size:26px;
-  margin:15px 0 8px
+font-family:Georgia,serif;
+font-size:25px;
+margin:12px 0 7px;
 }
-
-.tool p{
-  color:var(--muted);
-  font-size:15px
-}
-
 .best-for{
-  margin:12px 0;
-  font-size:14px
+font-size:14px;
+margin:14px 0 18px;
 }
-
 .tool .btn{
-  margin-top:auto;
-  text-align:center;
-  width:100%
+margin-top:auto;
+width:100%;
 }
-
-.coming{
-  background:#eee9df;
-  color:#555;
-  border-color:#ccc
+.btn.coming{
+background:#eee9df;
+color:#666;
+border-color:#d5ccbf;
+cursor:default;
 }
-
-/* ORDER */
+.disclosure{
+background:#eee9df;
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px 18px;
+margin:18px 0 8px;
+font-size:13px;
+color:#555;
+}
 
 .order{
-  margin:25px 0 10px;
-  background:var(--dark);
-  color:white;
-  border-radius:24px;
-  padding:34px;
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
-  gap:28px
+margin:18px 0 10px;
+background:var(--dark);
+color:white;
+border-radius:22px;
+padding:32px;
+display:grid;
+grid-template-columns:1.4fr 1fr;
+gap:26px;
 }
-
-.order h2{
-  color:white
-}
-
-.order p{
-  color:#d8d2c8
-}
-
+.order h2{color:white}
+.order p{color:#d8d2c8}
 .chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-  margin:18px 0
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:16px 0;
 }
-
 .chip{
-  border:1px solid #625e56;
-  border-radius:999px;
-  padding:8px 12px;
-  font-size:14px
+border:1px solid #625e56;
+border-radius:999px;
+padding:7px 11px;
+font-size:13px;
 }
-
 .order .btn{
-  background:white;
-  color:var(--dark);
-  border-color:white
+background:white;
+color:var(--dark);
+border-color:white;
 }
-
-/* HOW IT WORKS */
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:28px
-}
-
 .step{
-  padding:22px 0;
-  border-top:2px solid var(--ink)
+padding:20px 0;
+border-top:2px solid var(--ink);
 }
-
 .num{
-  font-size:12px;
-  color:var(--accent);
-  font-weight:900
+font-size:12px;
+color:var(--accent);
+font-weight:900;
 }
-
-/* DISCLOSURE */
-
-.disclosure{
-  background:#eee9df;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:20px;
-  margin:20px 0 40px;
-  font-size:13px;
-  color:#555
+.video-note{
+background:var(--card);
+border:1px dashed #b9ad9c;
+border-radius:16px;
+padding:22px;
+margin-top:22px;
 }
-
-.disclosure strong{
-  color:var(--ink)
-}
-
-/* FOOTER */
+.video-note p{color:var(--muted);margin-bottom:0}
 
 footer{
-  padding:34px 0 50px;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  font-size:14px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px
+padding:30px 0 44px;
+border-top:1px solid var(--line);
+color:var(--muted);
+font-size:14px;
+display:flex;
+justify-content:space-between;
+gap:20px;
 }
-
-/* MOBILE */
 
 @media(max-width:850px){
-
-  .menu,
-  .picks{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-  .order{
-    grid-template-columns:1fr
-  }
+.menu,.picks{grid-template-columns:repeat(2,1fr)}
+.order{grid-template-columns:1fr}
 }
-
-@media(max-width:760px){
-
-  nav{
-    display:none
-  }
-
-  .menu,
-  .picks,
-  .steps,
-  .order{
-    grid-template-columns:1fr
-  }
-
-  .hero{
-    padding-top:55px
-  }
-
-  .section{
-    padding:42px 0
-  }
-
-  h1{
-    font-size:54px
-  }
-
-  footer{
-    flex-direction:column
-  }
+@media(max-width:650px){
+nav{display:none}
+.menu,.picks,.steps,.order{grid-template-columns:1fr}
+.hero{padding-top:52px}
+.section{padding:38px 0}
+h1{font-size:52px}
+footer{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
 <header>
+<a class="logo" href="#">
+AI <span>Steakhouse</span> Choice
+</a>
 
-  <a class="logo" href="#">
-    AI <span>Steakhouse</span> Choice
-  </a>
-
-  <nav>
-    <a href="#menu">Menu</a>
-    <a href="#picks">Chef's Picks</a>
-    <a href="#order">Build My Order</a>
-  </nav>
-
+<nav>
+<a href="#menu">Menu</a>
+<a href="#picks">Chef's Picks</a>
+<a href="#order">Build My Order</a>
+<a href="#videos">Videos</a>
+</nav>
 </header>
 
 <main>
@@ -405,593 +257,480 @@ footer{
 <!-- HERO -->
 
 <section class="hero">
+<div class="eyebrow">Welcome to the AI Steakhouse</div>
 
-  <div class="eyebrow">
-    Welcome to the AI Steakhouse
-  </div>
+<h1>
+Choose AI.<br>
+Have It Your Way.
+</h1>
 
-  <h1>
-    Choose AI.<br>
-    Have It Your Way.
-  </h1>
+<p>
+Skip the AI overwhelm. Discover practical AI tools for creating content,
+making videos, improving audio, building presentations and getting work done.
+</p>
 
-  <p>
-    Skip the AI overwhelm. Discover the tools, workflows and
-    automations that fit what you actually want to accomplish.
-  </p>
-
-  <div class="buttons">
-
-    <a class="btn" href="#order">
-      🍽️ Build My AI Order
-    </a>
-
-    <a class="btn alt" href="#menu">
-      Browse the Menu
-    </a>
-
-  </div>
-
+<div class="buttons">
+<a class="btn" href="#picks">Explore Chef's Picks</a>
+<a class="btn alt" href="#menu">Browse the Menu</a>
+</div>
 </section>
-
 
 <!-- AI MENU -->
 
 <section class="section" id="menu">
 
-  <div class="eyebrow">
-    What's on the menu?
-  </div>
+<div class="eyebrow">What's on the menu?</div>
 
-  <h2>
-    AI served for your goals.
-  </h2>
+<h2>AI served for your goals.</h2>
 
-  <p class="lead">
-    Don't know which AI tools you need? Start with what you're
-    trying to accomplish.
-  </p>
+<p class="lead">
+Start with the task you want to accomplish, then explore tools
+that may fit your workflow and budget.
+</p>
 
-  <div class="menu">
+<div class="menu">
 
-    <a class="item" href="#video">
-      <b>🎬 AI Video</b>
-      <p>
-        Create videos, presentations, training and social content.
-      </p>
-    </a>
+<a class="item" href="#video">
+<b>🎬 AI Video</b>
+<p>Create presenter-led videos, edit footage and turn ideas into video content.</p>
+</a>
 
-    <a class="item" href="#voice">
-      <b>🎙️ Voice & Audio</b>
-      <p>
-        AI voices, narration, podcasts and audio creation.
-      </p>
-    </a>
+<a class="item" href="#voice">
+<b>🎙️ Voice & Audio</b>
+<p>Generate narration, voiceovers and audio for content projects.</p>
+</a>
 
-    <a class="item" href="#writing">
-      <b>✍️ Writing & Content</b>
-      <p>
-        Write, edit, research and improve your content.
-      </p>
-    </a>
+<a class="item" href="#writing">
+<b>✍️ Writing & Content</b>
+<p>Draft, edit and improve written content and communications.</p>
+</a>
 
-    <a class="item" href="#business">
-      <b>💼 Business & Productivity</b>
-      <p>
-        Organize projects, manage work and get more done.
-      </p>
-    </a>
+<a class="item" href="#business">
+<b>💼 Business & Productivity</b>
+<p>Organize projects, tasks and team workflows.</p>
+</a>
 
-    <a class="item" href="#growth">
-      <b>📈 Marketing & Growth</b>
-      <p>
-        AI tools for marketing, customers and business growth.
-      </p>
-    </a>
+<a class="item" href="#presentations">
+<b>📊 Presentations & Visuals</b>
+<p>Turn ideas and information into presentations and visual documents.</p>
+</a>
 
-    <a class="item" href="#value">
-      <b>💰 Value Menu</b>
-      <p>
-        Free and affordable AI tools worth knowing about.
-      </p>
-    </a>
+<a class="item" href="#value">
+<b>💰 Value Menu</b>
+<p>Explore free plans, trials and practical ways to evaluate AI tools.</p>
+</a>
 
-  </div>
-
+</div>
 </section>
-
 
 <!-- CHEF'S PICKS -->
 
 <section class="section" id="picks">
 
-  <div class="eyebrow">
-    🔥 Chef's Picks
-  </div>
+<div class="eyebrow">🔥 Chef's Picks</div>
 
-  <h2>
-    Start with these.
-  </h2>
+<h2>Tools worth exploring.</h2>
 
-  <p class="lead">
-    A growing selection of AI tools we think are worth putting
-    on your plate.
-  </p>
+<p class="lead">
+A growing collection of AI products. Check each provider's current
+features, terms and pricing before choosing a plan.
+</p>
 
-  <div class="picks">
+<div class="disclosure">
+<strong>Affiliate disclosure:</strong>
+Some links below are affiliate links. AI Steakhouse Choice may earn
+a commission if you sign up or purchase through them, at no additional
+cost to you. Affiliate relationships do not guarantee a positive
+review or recommendation.
+</div>
 
+<div class="picks">
 
-    <!-- ELEVENLABS -->
+<!-- ELEVENLABS -->
 
-    <div class="tool" id="voice">
+<div class="tool" id="voice">
 
-      <div class="tool-top">
+<div class="tool-top">
+<div class="tool-icon">🎙️</div>
+<div class="badge">Affiliate link active</div>
+</div>
 
-        <div class="tool-icon">🎙️</div>
+<h3>ElevenLabs</h3>
 
-        <div class="badge">
-          Chef's Pick
-        </div>
+<p>
+AI voice tools for text-to-speech, voiceovers, dubbing
+and other audio workflows.
+</p>
 
-      </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Creators, narration and audio production
+</div>
 
-      <h3>ElevenLabs</h3>
-
-      <p>
-        Powerful AI voice technology for narration, voiceovers,
-        content creation and more.
-      </p>
-
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Creators, voiceovers & audio
-      </div>
-
-      <!-- INSERT ELEVENLABS AFFILIATE URL HERE -->
-
-      <a class="btn" href="https://try.elevenlabs.io/f07uzp01lxig" target="_blank" rel="nofollow sponsored">
-  Try ElevenLabs →
+<a class="btn"
+href="https://try.elevenlabs.io/f07uzp01lxig"
+target="_blank"
+rel="nofollow sponsored noopener">
+Try ElevenLabs →
 </a>
 
-    </div>
+</div>
 
+<!-- SYNTHESIA -->
 
-    <!-- SYNTHESIA -->
+<div class="tool" id="video">
 
-    <div class="tool" id="video">
+<div class="tool-top">
+<div class="tool-icon">🎬</div>
+<div class="badge">Affiliate link active</div>
+</div>
 
-      <div class="tool-top">
+<h3>Synthesia</h3>
 
-        <div class="tool-icon">🎬</div>
+<p>
+Create presenter-style videos using AI avatars
+and text-based video workflows.
+</p>
 
-        <div class="badge">
-          Chef's Pick
-        </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Training, explainers and business presentations
+</div>
 
-      </div>
-
-      <h3>Synthesia</h3>
-
-      <p>
-        Create professional AI-generated videos using digital
-        presenters without traditional filming.
-      </p>
-
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Business, training & presentations
-      </div>
-
-      <!-- INSERT SYNTHESIA AFFILIATE URL HERE -->
-
-      <a class="btn" href="https://www.synthesia.io/?via=brian-ridgway" target="_blank" rel="nofollow sponsored">
-  Try Synthesia →
+<a class="btn"
+href="https://www.synthesia.io/?via=brian-ridgway"
+target="_blank"
+rel="nofollow sponsored noopener">
+Try Synthesia →
 </a>
 
-    </div>
+</div>
 
+<!-- DESCRIPT -->
 
-    <!-- CLICKUP -->
+<div class="tool" id="descript">
 
-    <div class="tool" id="business">
+<div class="tool-top">
+<div class="tool-icon">🎧</div>
+<div class="badge">Affiliate link active</div>
+</div>
 
-      <div class="tool-top">
+<h3>Descript</h3>
 
-        <div class="tool-icon">💼</div>
+<p>
+Record, transcribe and edit audio or video by editing
+the transcript, then create clips and captions.
+</p>
 
-        <div class="badge">
-          Coming Soon
-        </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Podcasts, talking-head videos and repurposing content
+</div>
 
-      </div>
+<a class="btn"
+href="https://get.descript.com/x92bqhqznq5g"
+target="_blank"
+rel="nofollow sponsored noopener">
+Try Descript →
+</a>
 
-      <h3>ClickUp</h3>
+</div>
 
-      <p>
-        A powerful productivity and project-management platform
-        designed to bring work into one place.
-      </p>
+<!-- GAMMA -->
 
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Teams, projects & productivity
-      </div>
+<div class="tool" id="presentations">
 
-      <a class="btn coming" href="#picks">
-        Affiliate Link Coming Soon
-      </a>
+<div class="tool-top">
+<div class="tool-icon">📊</div>
+<div class="badge">Affiliate link active</div>
+</div>
 
-    </div>
+<h3>Gamma</h3>
 
+<p>
+Turn ideas and source material into presentations,
+documents, social visuals and simple websites.
+</p>
 
-    <!-- INVIDEO -->
+<div class="best-for">
+<strong>Best for:</strong>
+Presentations, proposals and visual storytelling
+</div>
 
-    <div class="tool">
+<a class="btn"
+href="https://try.gamma.app/34hxguhyh2is"
+target="_blank"
+rel="nofollow sponsored noopener">
+Try Gamma →
+</a>
 
-      <div class="tool-top">
+</div>
 
-        <div class="tool-icon">🎥</div>
+<!-- CLICKUP -->
 
-        <div class="badge">
-          Coming Soon
-        </div>
+<div class="tool" id="business">
 
-      </div>
+<div class="tool-top">
+<div class="tool-icon">💼</div>
+<div class="badge pending">Coming soon</div>
+</div>
 
-      <h3>InVideo AI</h3>
+<h3>ClickUp</h3>
 
-      <p>
-        AI-powered video creation designed to help turn ideas
-        and prompts into videos.
-      </p>
+<p>
+A work management platform for organizing projects,
+tasks, documents and team workflows.
+</p>
 
-      <div class="best-for">
-        <strong>Best for:</strong>
-        YouTube & social video
-      </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Teams, projects and productivity
+</div>
 
-      <a class="btn coming" href="#picks">
-        Affiliate Link Coming Soon
-      </a>
+<span class="btn coming" aria-disabled="true">
+Affiliate link coming soon
+</span>
 
-    </div>
+</div>
 
+<!-- INVIDEO -->
 
-    <!-- DESCRIPT -->
+<div class="tool">
 
-    <div class="tool">
+<div class="tool-top">
+<div class="tool-icon">🎥</div>
+<div class="badge pending">Coming soon</div>
+</div>
 
-      <div class="tool-top">
+<h3>InVideo AI</h3>
 
-        <div class="tool-icon">🎧</div>
+<p>
+AI-assisted video creation for turning prompts
+and ideas into video drafts.
+</p>
 
-        <div class="badge">
-          Coming Soon
-        </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Social video and quick video concepts
+</div>
 
-      </div>
+<span class="btn coming" aria-disabled="true">
+Affiliate link coming soon
+</span>
 
-      <h3>Descript</h3>
+</div>
 
-      <p>
-        A powerful tool for editing video and audio using
-        text-based workflows.
-      </p>
+<!-- GRAMMARLY -->
 
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Podcasts, video & content
-      </div>
+<div class="tool" id="writing">
 
-      <a class="btn coming" href="#picks">
-        Affiliate Link Coming Soon
-      </a>
+<div class="tool-top">
+<div class="tool-icon">✍️</div>
+<div class="badge pending">Coming soon</div>
+</div>
 
-    </div>
+<h3>Grammarly</h3>
 
+<p>
+Writing assistance for clarity, tone, grammar
+and everyday communication.
+</p>
 
-    <!-- GRAMMARLY -->
+<div class="best-for">
+<strong>Best for:</strong>
+Writing and communication
+</div>
 
-    <div class="tool" id="writing">
+<span class="btn coming" aria-disabled="true">
+Affiliate link coming soon
+</span>
 
-      <div class="tool-top">
+</div>
 
-        <div class="tool-icon">✍️</div>
+<!-- JASPER -->
 
-        <div class="badge">
-          Coming Soon
-        </div>
+<div class="tool" id="growth">
 
-      </div>
+<div class="tool-top">
+<div class="tool-icon">📈</div>
+<div class="badge pending">Not yet joined</div>
+</div>
 
-      <h3>Grammarly</h3>
+<h3>Jasper</h3>
 
-      <p>
-        AI-powered writing assistance for improving clarity,
-        tone, grammar and communication.
-      </p>
+<p>
+AI-assisted marketing and brand-content workflows
+for businesses and marketing teams.
+</p>
 
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Writing & communication
-      </div>
+<div class="best-for">
+<strong>Best for:</strong>
+Marketing teams and business content
+</div>
 
-      <a class="btn coming" href="#picks">
-        Affiliate Link Coming Soon
-      </a>
+<span class="btn coming" aria-disabled="true">
+Affiliate program not joined
+</span>
 
-    </div>
+</div>
 
-
-    <!-- GAMMA -->
-
-    <div class="tool">
-
-      <div class="tool-top">
-
-        <div class="tool-icon">📊</div>
-
-        <div class="badge">
-          Coming Soon
-        </div>
-
-      </div>
-
-      <h3>Gamma</h3>
-
-      <p>
-        Create polished presentations, documents and visual
-        content with AI.
-      </p>
-
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Presentations & business content
-      </div>
-
-      <a class="btn coming" href="#picks">
-        Affiliate Link Coming Soon
-      </a>
-
-    </div>
-
-
-    <!-- JASPER -->
-
-    <div class="tool" id="growth">
-
-      <div class="tool-top">
-
-        <div class="tool-icon">📈</div>
-
-        <div class="badge">
-          Coming Soon
-        </div>
-
-      </div>
-
-      <h3>Jasper</h3>
-
-      <p>
-        AI-powered marketing and content tools designed for
-        businesses and marketing teams.
-      </p>
-
-      <div class="best-for">
-        <strong>Best for:</strong>
-        Marketing & business content
-      </div>
-
-      <a class="btn coming" href="#picks">
-        Affiliate Program Coming Soon
-      </a>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
-
 
 <!-- BUILD MY ORDER -->
 
 <section class="section" id="order">
 
-  <div class="order">
+<div class="order">
 
-    <div>
+<div>
 
-      <div class="eyebrow">
-        Our signature feature
-      </div>
+<div class="eyebrow">Our signature feature</div>
 
-      <h2>
-        Build My AI Order
-      </h2>
+<h2>Build My AI Order</h2>
 
-      <p>
-        Tell us what you're trying to accomplish and we'll help
-        you assemble an AI stack around your goal, budget and
-        experience level.
-      </p>
+<p>
+Tell us what you're trying to accomplish. We'll help you identify
+AI tools and workflows to investigate based on your goal,
+budget and experience level.
+</p>
 
-      <div class="chips">
+<div class="chips">
+<span class="chip">Create content</span>
+<span class="chip">Make videos</span>
+<span class="chip">Improve audio</span>
+<span class="chip">Build presentations</span>
+<span class="chip">Organize work</span>
+</div>
 
-        <span class="chip">Save time</span>
-        <span class="chip">Save money</span>
-        <span class="chip">Create content</span>
-        <span class="chip">Grow a business</span>
-        <span class="chip">Automate work</span>
-        <span class="chip">Make money</span>
+<a class="btn"
+href="mailto:support@aisteakhousechoice.com?subject=Build%20My%20AI%20Order">
+Start My Order →
+</a>
 
-      </div>
+</div>
 
-      <a class="btn"
-         href="mailto:support@aisteakhousechoice.com?subject=Build%20My%20AI%20Order">
+<div>
 
-        Start My Order →
+<p><strong>Your AI stack might include:</strong></p>
 
-      </a>
+<p>
+🎬 <strong>Video:</strong><br>
+Presenter or editing tools
+</p>
 
-    </div>
+<p>
+🎙️ <strong>Audio:</strong><br>
+Voiceover and narration
+</p>
 
+<p>
+📊 <strong>Visuals:</strong><br>
+Presentations and documents
+</p>
 
-    <div>
+<p>
+💼 <strong>Workflow:</strong><br>
+Project and task management
+</p>
 
-      <p>
-        <strong>Your future order might look like:</strong>
-      </p>
+</div>
 
-      <p>
-        🥩 <strong>Main Course</strong><br>
-        Business AI platform
-      </p>
-
-      <p>
-        🥗 <strong>Side</strong><br>
-        Writing & content tool
-      </p>
-
-      <p>
-        🔥 <strong>Chef's Special</strong><br>
-        AI video creator
-      </p>
-
-      <p>
-        🍰 <strong>Dessert</strong><br>
-        Voice & content automation
-      </p>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
-
 
 <!-- HOW IT WORKS -->
 
 <section class="section">
 
-  <div class="eyebrow">
-    How it works
-  </div>
+<div class="eyebrow">How it works</div>
 
-  <h2>
-    We taste-test. You choose.
-  </h2>
+<h2>We research. You choose.</h2>
 
-  <div class="steps">
+<div class="steps">
 
-    <div class="step">
+<div class="step">
+<div class="num">01 — DISCOVER</div>
+<h3>Find relevant tools</h3>
+<p>Explore products by the job you need to get done.</p>
+</div>
 
-      <div class="num">
-        01 — DISCOVER
-      </div>
+<div class="step">
+<div class="num">02 — COMPARE</div>
+<h3>Understand the differences</h3>
+<p>Review use cases, features, limitations and pricing before deciding.</p>
+</div>
 
-      <h3>
-        Find the right tools
-      </h3>
+<div class="step">
+<div class="num">03 — CHOOSE</div>
+<h3>Build your workflow</h3>
+<p>Choose individual tools or combine them into a workflow that fits your needs.</p>
+</div>
 
-      <p>
-        We research the rapidly changing AI landscape so you
-        don't have to.
-      </p>
-
-    </div>
-
-
-    <div class="step">
-
-      <div class="num">
-        02 — TASTE TEST
-      </div>
-
-      <h3>
-        See AI in action
-      </h3>
-
-      <p>
-        Practical demos, comparisons and real-world use cases—
-        not hype.
-      </p>
-
-    </div>
-
-
-    <div class="step">
-
-      <div class="num">
-        03 — ORDER
-      </div>
-
-      <h3>
-        Build your stack
-      </h3>
-
-      <p>
-        Choose individual tools or combine them into a workflow
-        that fits your needs.
-      </p>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
+<!-- YOUTUBE VIDEO SECTION -->
+
+<section class="section" id="videos">
+
+<div class="eyebrow">Watch. Compare. Choose.</div>
+
+<h2>AI tools, explained.</h2>
+
+<p class="lead">
+We're developing practical demos and comparisons to help you
+understand what each tool does, who it is for and how it fits
+into a real workflow.
+</p>
+
+<div class="video-note">
+
+<strong>Our video library is coming soon.</strong>
+
+<p>
+New videos will be published on the AI Steakhouse Choice
+YouTube channel and linked to detailed tool guides on this website.
+</p>
+
+</div>
+
+</section>
 
 <!-- VALUE MENU -->
 
 <section class="section" id="value">
 
-  <div class="eyebrow">
-    More coming to the menu
-  </div>
+<div class="eyebrow">More coming to the menu</div>
 
-  <h2>
-    Your AI journey starts here.
-  </h2>
+<h2>Your AI journey starts here.</h2>
 
-  <p class="lead">
-    We're building a growing library of AI tools, comparisons,
-    tutorials, workflows and recommendations.
-  </p>
+<p class="lead">
+We are building a growing library of practical tutorials,
+comparisons, product walkthroughs and recommendations.
+Product features and pricing can change, so always verify
+details with the provider.
+</p>
 
 </section>
 
-
-<!-- AFFILIATE DISCLOSURE -->
-
-<div class="disclosure">
-
-  <strong>Affiliate Disclosure:</strong>
-  AI Steakhouse Choice may earn a commission when you purchase
-  or sign up for certain products or services through links on
-  this website. This does not increase the price you pay.
-  Our recommendations are intended to help you find tools that
-  may fit your needs.
-
-</div>
-
-
 </main>
 
+<!-- FOOTER -->
 
 <footer>
 
-  <div>
-    <strong>AI Steakhouse Choice</strong><br>
-    Choose AI. Have It Your Way.
-  </div>
+<div>
+<strong>AI Steakhouse Choice</strong><br>
+Choose AI. Have It Your Way.
+</div>
 
-  <div>
-    © 2026 AI Steakhouse Choice. All rights reserved.
-  </div>
+<div>
+© 2026 AI Steakhouse Choice. All rights reserved.
+</div>
 
 </footer>
 
 </div>
-
 </body>
 </html>
